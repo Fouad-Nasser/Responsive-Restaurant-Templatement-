@@ -19,7 +19,7 @@
     /*========== Font size ===========*/
     --biggest-font-size: 3rem;
     --h1-font-size: 1.7rem;
-    --h2-font-size: 1.4rem;
+    --h2-font-size: 1.2rem;
     --h3-font-size: 1rem;
     --normal-font-size: 0.9rem;
     --small-font-size: .813rem;
@@ -44,7 +44,7 @@
     :root {
       --biggest-font-size: 5rem;
       --h1-font-size: 2.25rem;
-      --h2-font-size: 1.75rem;
+      --h2-font-size: 1.6rem;
       --h3-font-size: 1.2rem;
       --normal-font-size: 1rem;
       --small-font-size: .875rem;
@@ -66,11 +66,18 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
 
 h1, h2, h3 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     font-family: var(--title-font);
+    text-transform: capitalize;
 }
 
 ul {
@@ -99,11 +106,11 @@ input {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-    padding: 4.5rem 0 2.5rem;
+    padding: 5rem 0 2rem;
 }
 
 .section-title {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     color: var(--title-color);
     text-align: center;
     text-transform: capitalize;
@@ -119,20 +126,40 @@ input {
     margin-top: 1rem;
     display: inline-block;
     color: #FFF;
-    font-size: 1.8rem;
     cursor: pointer;
-    padding: 1rem 2.5rem;
     transition: all .5s ease-in-out;
     text-transform: uppercase;
-    border: 5px solid var(--main-color);
     border-radius: 1.6rem;
 }
 
 .btn:hover{
     letter-spacing: 0.2rem;
     background: var(--main-color-alt);
+    color: #FFF;
+    font-weight: var(--font-bold);
 }
 
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-title{
+  text-align: left;
+}
+
+.flex-description{
+  margin: 1.5rem 0 1rem;
+}
+
+.flex-btn{
+  color: var(--text-color);
+  padding: 0.7rem 1rem;
+  border:  3px solid var(--main-color);
+  font-size: var(--normal-font-size);
+}
 
 
 /********************** start header ************************/
@@ -299,12 +326,19 @@ input {
 
 
 .home .slide .content h2{
-  font-size: var(--biggest-font-size);
+  font-size: 7vw;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   line-height: 1;
   padding: 2rem 0;
+}
+
+.home-btn{
+  color: #FFF;
+  padding: 1rem 2.5rem;
+  border: 5px solid var(--main-color);
+  font-size: 1.8rem;
 }
 
 .swiper-pagination-bullet {
@@ -324,6 +358,323 @@ input {
 }
 
 /********************* end home ***********************/
+
+
+
+/********************* start about ***********************/
+.about-img{
+  width: 100%;
+  overflow: var(--img-hidden);
+  margin: 1.7rem;
+}
+
+.about-img img{
+  width: 100%;
+  height: 100%;
+  transition: var(--img-transition);
+}
+
+.about-img img:hover{
+  transform: var(--img-scale);
+}
+/********************* end about ***********************/
+
+
+
+/********************* start menu ***********************/
+.menu{
+  width: 80%;
+  margin: 100px auto;
+}
+
+.menu .menu-div:not(#first-menu-div){
+  display: none;
+}
+
+.menu-list-items{
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  margin-bottom: 0.5rem;
+}
+
+.menu-list-items li{
+  border: 1px solid;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border-radius: 12rem;
+  margin: 0 0 1rem 1rem;
+}
+
+.mli-active{
+  color: var(--body-color);
+  background: var(--main-color);
+  font-weight: var(--font-bold);
+  scale: 1.2;
+}
+
+.mli-active::after{
+  content: "";
+  display: block;
+  height: 0.1rem;
+  background-color:var(--body-color);
+  font-weight: var(--font-bold);
+}
+
+.menu-div{
+  height: 500px;
+  display: flex;
+  border: 3px solid var(--main-color);
+  border-radius: 20px;
+}
+
+.lgitem{
+  width: 40%;
+  background: var(--main-color);
+  height: 100%;
+  border-radius: 17px 0 0 17px;
+  position: relative;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-div{
+  height: 60%;
+  overflow: hidden;
+}
+
+.info-div h2{
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem;
+  border-bottom: 1px solid #EEE;
+  color: var(--body-color);
+}
+
+.lgitem p{
+  padding: 1rem;
+}
+
+.lgitem .img-div{
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 0 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.img-div img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 20px;
+}
+.cover-an::before{
+  content: "";
+  background: rgba(240, 234, 234, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  z-index: 222;
+  border-radius: 0 0 0 20px;
+  animation: cover 2s;
+}
+.s::before{
+  background: rgba(252, 13, 5, 0.3);
+}
+.vapour{
+  position: absolute;
+  top:95%;
+  left: 15%;
+  display: flex;
+  z-index: 1;
+  text-align: center;
+}
+.vapour span
+{
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 10px;
+  height: 120px;
+  background: #FFF;
+  border-radius: 50%;
+  animation: animate 5s linear 3;
+  opacity: 0;
+  filter: blur(12px);
+  animation-delay: calc(var(--i)*-0.5s);
+}
+@keyframes animate
+{
+  0%{
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+  }
+  15%{
+      opacity: 1;
+  }
+  50%{
+      transform: translateY(-150px) scaleX(5);
+  }
+  95%{
+      opacity: 0;
+  }
+  100%{
+      transform: translateY(-300px) scaleX(10);
+  }
+}
+
+
+.smitems{
+  width: 60%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,50%);
+  justify-items: center;
+  padding: 2rem;
+}
+
+.smitem{
+  text-align: center;
+}
+
+
+
+.smitem-info{
+  text-transform: capitalize;
+}
+
+.smitem-info span{
+  color: var(--main-color);
+}
+
+.dish-img{
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  overflow: var(--img-hidden);
+}
+
+.dish-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: var(--img-transition);
+}
+
+.dish-img img:hover{
+  transform: var(--img-scale);
+}
+
+.img-div .botel{
+  width: 50%;
+  animation: botel 2s linear ;
+}
+
+.img-div .fruit{
+  width: 35%;
+  height: 60%;
+  animation: fruit 2s linear ;
+}
+
+@keyframes cover{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+@keyframes botel{
+  0%{
+    transform :translate(0,0);
+  }
+  50%{
+    transform :translate(2rem,0);
+  }
+  100%{
+    transform :translate(0,0);
+  }
+}
+
+@keyframes fruit{
+  0%{
+    rotate :(0deg);
+  }
+  50%{
+    rotate: 180deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+
+@media only screen and (max-width:650px) {
+
+  .menu-div{
+    flex-direction: column;
+  }
+  .lgitem{
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+    border-radius: 17px 17px 0 0;
+  }
+  .lgitem .info-div, .lgitem .img-div{
+    height: 100%;
+    width: 50%;
+  }
+
+  .lgitem .img-div{
+    border-radius: 0 17px 0 0;
+  }
+  .lgitem .img-div img{
+    border-radius: 0 17px 0 0;
+  }
+  .smitems{
+    width: 100%;
+    height: 60%;
+  }
+  .vapour{
+    top: 20%;
+    left: 20%;
+  }
+  .vapour span{
+    bottom: -30px;
+  }
+}
+
+/********************* end menu ***********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

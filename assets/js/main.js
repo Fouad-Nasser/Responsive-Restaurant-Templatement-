@@ -29,3 +29,24 @@ var swiper = new Swiper(".home-slider", {
       },
     },
 });
+
+
+
+/*============== tapped ===============*/
+const tabs = document.querySelectorAll(".menu-list-items li");
+const menuDivs = document.querySelectorAll(".menu-div");
+
+for (const tab of tabs) {
+   tab.addEventListener('click',(e)=>{
+       tabs.forEach((el)=>{
+           el.classList.remove('mli-active');
+        });
+         e.currentTarget.classList.add('mli-active');
+
+         menuDivs.forEach((el)=>{
+            el.style.display='none';
+         });
+         document.querySelector(e.currentTarget.dataset.cont).style.display='flex';
+
+   })
+}
