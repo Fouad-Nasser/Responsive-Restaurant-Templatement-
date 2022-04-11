@@ -114,7 +114,7 @@ input {
     color: var(--title-color);
     text-align: center;
     text-transform: capitalize;
-    margin-bottom: var(--mb-2);
+    padding-bottom: 1.4rem;
 }
 
 .container {
@@ -151,7 +151,7 @@ input {
 }
 
 .flex-description{
-  margin: 1.5rem 0 1rem;
+  margin: 0.7rem 0 1rem;
 }
 
 .flex-btn{
@@ -373,8 +373,6 @@ input {
 }
 
 /********************* end home ***********************/
-
-
 
 
 /********************* start menu ***********************/
@@ -690,14 +688,99 @@ input {
 
 
 
+/********************* start clints ***********************/
+.clints{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding: 6rem 1rem;
+  background: url(../img/clint-bk.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+
+.clints::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+
+.clint{
+  width: 80%;
+}
+
+.clint-top{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.clint h3{
+  color: var(--main-color);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.clint-top img{
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.clint p{
+  color: var(--body-color);
+}
+
+/********************* end clints ***********************/
 
 
 
 
+/********************* start popular ***********************/
+.popular-item{
+  text-align: center;
+  padding: 3rem;
+  border: 1px solid #DDD;
+  border-radius: 2rem;
+  box-shadow:  rgb(0 0 0 / 24%) 0px 3px 8px;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-width: 20rem;
+}
+
+.popular-item img{
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+
+.popular-item .stars{
+  color: var(--main-color);
+  margin: 1rem 0;
+}
+
+.popular-item .popular-btn{
+  color: var(--body-color);
+  padding: 0.7rem 1rem;
+  background-color:  var(--main-color);
+  font-size: var(--normal-font-size);
+  margin: 2rem 0;
+}
 
 
-
-
+/********************* end popular ***********************/
 
 
 @media screen and (min-width: 768px) {

@@ -50,3 +50,26 @@ for (const tab of tabs) {
 
    })
 }
+
+
+
+
+var swiper = new Swiper(".popular-items", {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 30,
+  pagination: {
+     el: ".swiper-pagination",
+     clickable: true,
+  },
+  breakpoints: {
+     0: {
+       slidesPerView: 2,
+     },
+     900: {
+       slidesPerView: 3,
+     },
+  },
+});
