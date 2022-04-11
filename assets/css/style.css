@@ -161,6 +161,21 @@ input {
   font-size: var(--normal-font-size);
 }
 
+.flex-img{
+  width: 100%;
+  overflow: var(--img-hidden);
+  margin: 1.7rem 0 0.7rem;
+}
+
+.flex-img img{
+  width: 100%;
+  height: 100%;
+  transition: var(--img-transition);
+}
+
+.flex-img img:hover{
+  transform: var(--img-scale);
+}
 
 /********************** start header ************************/
 
@@ -359,25 +374,6 @@ input {
 
 /********************* end home ***********************/
 
-
-
-/********************* start about ***********************/
-.about-img{
-  width: 100%;
-  overflow: var(--img-hidden);
-  margin: 1.7rem;
-}
-
-.about-img img{
-  width: 100%;
-  height: 100%;
-  transition: var(--img-transition);
-}
-
-.about-img img:hover{
-  transform: var(--img-scale);
-}
-/********************* end about ***********************/
 
 
 
@@ -661,9 +657,35 @@ input {
 
 
 
+/********************* start mobile ***********************/
+.mobile-features{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.6rem;
+  justify-items: center;
+  align-items: center;
+}
 
+.mobile-features li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.mobile-features li i{
+  font-size: var(--h1-font-size);
+  color: var(--main-color);
+  margin-bottom: 0.7rem;
+}
 
+.mobile-features li span{
+  text-transform: capitalize;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/********************* end mobile ***********************/
 
 
 
