@@ -781,6 +781,269 @@ input {
 
 
 /********************* end popular ***********************/
+.order p,.title{
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.order input, .order select, .order textarea{
+  color: var(--text-color);
+}
+
+.order label, .order legend, .order span{
+  color: var(--body-color);
+}
+
+.order  textarea {
+  resize: none;
+}
+
+.order-container{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: url(../img/backg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.order-container::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+
+.order-content{
+  max-width: 980px;
+  padding: 25px 30px;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+}
+
+.order fieldset{
+  padding: 0 20px 20px;
+  margin-bottom: 20px;
+}
+
+.order .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+
+.order .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+  text-transform: capitalize;
+}
+
+.order .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.order .input-box input,
+.order .input-box textarea{
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  text-transform: capitalize;
+  border-bottom-width: 2px;
+  transition: all 0.5s ease;
+}
+
+.order .input-box .map {
+  width: 100%;
+}
+
+.order .input-box input {
+  height: 45px;
+}
+
+.order .input-box textarea,
+.order .input-box .map {
+  height: 180px;
+}
+
+.order .input-box input:focus,
+.order .input-box textarea:focus{
+  box-shadow: 0 0 10px crimson;
+  border-color: crimson;
+}
+
+.order .survery label{
+  display: flex;
+}
+
+.order .survery .input-radio{
+  margin-right: 10px;
+}
+
+
+.order .survery p{
+  margin: 20px 0 10px;
+  font-size: 20px;
+}
+
+.order .survery select{
+  background: #FFF;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.survery textarea{
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+
+.survery textarea:focus
+{
+  outline: none !important;
+  box-shadow: 0 0 10px crimson;
+  border-color: crimson;
+}
+
+.button{
+  text-align: center;
+}
+
+.button input{
+  width: 90%;
+  padding: 10px;
+  background: crimson;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.button input:hover{
+  width: 100%;
+  background: rgb(133, 7, 32);
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+@media (max-width:600px){
+  .order-container{
+      max-width: 100%;
+  }
+  .order .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+
+  }
+}
+
+
+
+
+.footer-content{
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+  gap: 1.5rem;
+}
+
+.footer-item{
+  margin-top: 0.4rem;
+}
+
+.footer-data .footer-link{
+  color: var(--text-color-light);
+}
+
+.footer-end{
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-social{
+  display: flex;
+  gap: 0.7rem;
+  font-size: var(--h3-font-size);
+}
+
+.footer-social-item{
+  color: var(--main-color);
+}
+
+.footer-social-item .copyright{
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+
+
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--main-color);
+  padding: .5rem;
+  display: flex;
+  opacity: .9;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+.scrollup:hover {
+  background-color: var(--main-color-alt);
+  opacity: 1;
+}
+
+.scrollup-icon {
+  color: var(--body-color);
+  font-size: 1.2rem;
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 768px) {

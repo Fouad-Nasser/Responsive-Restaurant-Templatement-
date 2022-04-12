@@ -330,6 +330,8 @@
     </section>
     <!----------------  end menu  ----------------->
 
+
+
     <!----------------  start mobile  ----------------->
     <section class="mobile section container" id="mobile">
         <div class="mobile-container flex-container">
@@ -396,7 +398,7 @@
     <!----------------  end clints  ----------------->
 
 
-    <!----------------  start clints  ----------------->
+    <!----------------  start popular  ----------------->
     <section class="popular section container">
         <h2 class="section-title">
             Explore our popular dishes
@@ -405,7 +407,7 @@
          <div class="swiper-wrapper">
               <div class="swiper-slide popular-item">
                 <img src="assets/img/burger.jpg" alt="" class="dish-img">
-               <h3>delicious food</h3>
+               <h3>spices burger</h3>
                <div class="stars">
                    <i class="fas fa-star"></i>
                    <i class="fas fa-star"></i>
@@ -418,8 +420,8 @@
            </div>
    
            <div class="swiper-slide popular-item">
-               <img src="assets/img/burger.jpg" alt="" class="dish-img">
-              <h3>delicious food</h3>
+               <img src="assets/img/fried-checken.jpg" alt="" class="dish-img">
+              <h3>fried-checken</h3>
               <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -427,13 +429,13 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
               </div>
-              <div class="price">$39.99</div>
+              <div class="price">$27.99</div>
               <a href="#" class="btn popular-btn">buy now</a>
           </div>
    
                <div class="swiper-slide popular-item">
-                   <img src="assets/img/burger.jpg" alt="" class="dish-img">
-               <h3>delicious food</h3>
+                   <img src="assets/img/fruit-cake.jpg" alt="" class="dish-img">
+               <h3>fruit cake</h3>
                <div class="stars">
                    <i class="fas fa-star"></i>
                    <i class="fas fa-star"></i>
@@ -441,28 +443,235 @@
                    <i class="fas fa-star"></i>
                    <i class="fas fa-star"></i>
                </div>
-               <div class="price">$39.99</div>
+               <div class="price">$16.99</div>
                <a href="#" class="btn popular-btn">buy now</a>
            </div>
    
            <div class="swiper-slide popular-item">
-               <img src="assets/img/burger.jpg" alt="" class="dish-img">
-           <h3>delicious food</h3>
+               <img src="assets/img/fish1.jpg" alt="" class="dish-img">
+           <h3>fish dish</h3>
            <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
+               <i class="fa-solid fa-star-half-stroke"></i>
            </div>
-           <div class="price">$39.99</div>
+           <div class="price">$29.99</div>
            <a href="#" class="btn popular-btn">buy now</a>
            </div>
          </div>
         <div class="swiper-pagination"></div>
         </div>
     </section>
-    <!----------------  end clints  ----------------->
+    <!----------------  end popular  ----------------->
+
+
+    <!----------------  start order  ----------------->
+    <section class="section order">
+        <h2 class="section-title">get your order now</h2>
+        <div class="order-container">
+            <div class="order-content">
+                <form action="#">
+                  <fieldset>
+                      <legend>order details :</legend>
+                      <div class="user-details">
+                          <div class="input-box">
+                              <label for="full-name" class="details">full name</label>
+                              <input type="text" id="full-name" placeholder="enter your name" required>
+                          </div>
+                          <div class="input-box">
+                            <label for="phone-number" class="details">phone number</label>
+                            <input type="text" id="phone-number" placeholder="Enter your number" required>
+                          </div>
+                          <div class="input-box">
+                            <label for="food-name" class="details">food name</label>
+                            <input type="text" id="password" placeholder="Enter your password" required>
+                          </div>
+                          <div class="input-box">
+                              <label for="order-details" class="details">order details</label>
+                              <input type="text" id="order-details" placeholder="specifics with food">
+                          </div>
+                          <div class="input-box">
+                            <label for="how-many" class="details">how many</label>
+                            <input type="number" placeholder="how many you want" required>
+                          </div>
+                          <div class="input-box">
+                              <label for="when" class="details">when you want</label>
+                              <input type="datetime-local" id="when" name="when">
+                          </div>
+                          <div class="input-box">
+                              <label for="address" class="details">address</label>
+                              <textarea
+                                 name="address" 
+                                 placeholder="enter your address" 
+                                 id="address" 
+                                 required></textarea>
+                          </div>
+                          <div class="input-box">
+                            <span>our address</span>
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.37709963704!2d31.223444894174385!3d30.059483810339266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sin!4v1648403098407!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                          </div>
+                      </div>
+                  </fieldset>
+        
+        
+                  <div class="survery">
+                      <fieldset>
+                          <legend>survey:</legend>
+                                
+                          <div class="form-group">
+                            <p>would you recommend our restaurant to a friend?</p>
+                            <label>
+                              <input
+                                name="user-recommend"
+                                value="definitely"
+                                type="radio"
+                                class="input-radio"
+                                checked
+                              />Definitely</label
+                            >
+                      <label>
+                              <input
+                                name="user-recommend"
+                                value="maybe"
+                                type="radio"
+                                class="input-radio"
+                              />Maybe</label
+                            >
+                      
+                            <label
+                              ><input
+                                name="user-recommend"
+                                value="not-sure"
+                                type="radio"
+                                class="input-radio"
+                              />Not sure</label
+                            >
+                          </div>
+                      
+                          <div class="form-group">
+                            <p>
+                              what is your favorite category of food?
+                            </p>
+                            <select id="most-like" name="mostLike" class="form-control" required>
+                              <option disabled selected value>Select an option</option>
+                              <option value="spicy">spicy</option>
+                              <option value="grilled">grilled</option>
+                              <option value="candy">candy</option>
+                              <option value="juice">juice</option>
+                            </select>
+                          </div>
+                      
+                          <div class="form-group">
+                            <p>any comments or suggestions?</p>
+                            <textarea
+                              id="comments"
+                              class="input-textarea"
+                              name="comment"
+                              placeholder="Enter your comment here..."
+                            ></textarea>
+                          </div>
+                              </fieldset>
+                  </div>
+        
+                      <div class="button">
+                      <input type="submit" value="Register">
+                      </div>
+                </form>
+            </div>
+           </div>
+    </section>
+    <!----------------  end order  ----------------->
+
+
+
+
+    <footer class="footer section">
+        <div class="footer-container container ">
+            <div class="footer-content">
+                <div class="footer-data">
+                    <h3 class="footer-title"><i class="fa-solid fa-pizza-slice"></i>
+                        restaurant</h3>
+                    <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel quaerat cumque, laborum perferendis sapiente magnam molestias doloribus.
+                    </p>
+                </div>
+
+                <div class="footer-data">
+                    <h3 class="footer-subtitle">About</h3>
+                    <ul>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">About Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Features</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">New & Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-data">
+                    <h3 class="footer-subtitle">Company</h3>
+                    <ul>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Team</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Plan y Pricing</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Become a member</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-data">
+                    <h3 class="footer-subtitle">Support</h3>
+                    <ul>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Support Center</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-end">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer-social-item">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer-social-item">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer-social-item">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer-social-item">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <span class="copyright">
+                    &copy; 2021 restaurant. all rigths reserved
+                </span>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-arrow-up scrollup-icon"></i>
+    </a>
+
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
