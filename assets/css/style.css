@@ -61,6 +61,12 @@
   }
 
 /*========== Variables Dark theme ==========*/
+body.dark-theme {
+    --body-color:#17171c;
+    --title-color: #d8264a;
+    --text-color: #FFF;
+    --text-color-light: #DDD;
+}
 
 
 /*=============== BASE ===============*/
@@ -341,7 +347,7 @@ input {
   font-size: var(--home-font-size);
   display: block;
   padding-bottom: 0.5rem;
-  color: var(--body-color);
+  color: #FFF;
 }
 
 .home .slide .content .slid-commit i{
@@ -459,7 +465,7 @@ input {
   text-transform: capitalize;
   padding: 1rem;
   border-bottom: 1px solid #EEE;
-  color: var(--body-color);
+  color: #FFF;
 }
 
 .lgitem p{
@@ -560,7 +566,7 @@ input {
 .smitem-info{
   text-transform: capitalize;
   font-size: var(--h3-font-size);
-  color: var(--main-color);
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -687,12 +693,13 @@ input {
 }
 
 .mobile-features li i{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   color: var(--main-color);
   margin-bottom: 0.7rem;
 }
 
 .mobile-features li span{
+  font-size: var(--small-font-size);
   text-transform: capitalize;
   color: var(--text-color);
   text-align: center;
@@ -755,7 +762,7 @@ input {
 }
 
 .clint p{
-  color: var(--body-color);
+  color: #FFF;
 }
 
 /********************* end clints ***********************/
@@ -781,6 +788,10 @@ input {
   margin-bottom: 2rem;
 }
 
+.popular-item h3{
+  color: var(--text-color);
+}
+
 .popular-item .stars{
   color: var(--main-color);
   margin: 1rem 0;
@@ -802,11 +813,11 @@ input {
 }
 
 .order input, .order select, .order textarea{
-  color: var(--text-color);
+  color: #000;
 }
 
 .order label, .order legend, .order span{
-  color: var(--body-color);
+  color: #FFF;
 }
 
 .order  textarea {
@@ -1141,6 +1152,7 @@ input {
   .mobile-container .flex-img{
     width : 80%;
     margin: 1.7rem auto;
+    height: 250px;
   }
   .flex-img{
     height: 300px;
