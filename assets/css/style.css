@@ -17,7 +17,8 @@
     --title-font: 'Raleway', sans-serif;
 
     /*========== Font size ===========*/
-    --biggest-font-size: 3rem;
+    --biggest-font-size: 9vw;
+    --home-font-size: 2rem;
     --h1-font-size: 1.7rem;
     --h2-font-size: 1.2rem;
     --h3-font-size: 1rem;
@@ -43,12 +44,19 @@
 @media screen and (min-width: 968px) {
     :root {
       --biggest-font-size: 5rem;
+      --home-font-size: 2.4rem;
       --h1-font-size: 2.25rem;
       --h2-font-size: 1.6rem;
       --h3-font-size: 1.2rem;
       --normal-font-size: 1rem;
       --small-font-size: .875rem;
       --smaller-font-size: .813rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    :root {
+      --home-font-size: 7vw;
     }
   }
 
@@ -191,10 +199,11 @@ input {
 
 /*=============== NAV ===============*/
 .nav{
-    height: 3rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-logo, .nav-toggle {
@@ -329,7 +338,7 @@ input {
 }
 
 .home .slide .content .slid-commit{
-  font-size: var(--h1-font-size);
+  font-size: var(--home-font-size);
   display: block;
   padding-bottom: 0.5rem;
   color: var(--body-color);
@@ -341,7 +350,7 @@ input {
 
 
 .home .slide .content h2{
-  font-size: 7vw;
+  font-size: var(--biggest-font-size);
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
@@ -351,9 +360,9 @@ input {
 
 .home-btn{
   color: #FFF;
-  padding: 1rem 2.5rem;
-  border: 5px solid var(--main-color);
-  font-size: 1.8rem;
+  padding: 3vw 5vw;
+  border: 3px solid var(--main-color);
+  font-size: var(--home-font-size);
 }
 
 .swiper-pagination-bullet {
@@ -444,7 +453,8 @@ input {
   overflow: hidden;
 }
 
-.info-div h2{
+.info-div h3{
+  font-size: var(--h3-font-size);
   text-align: center;
   text-transform: capitalize;
   padding: 1rem;
@@ -540,13 +550,18 @@ input {
 }
 
 .smitem{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 
 .smitem-info{
   text-transform: capitalize;
+  font-size: var(--h3-font-size);
+  color: var(--main-color);
+  text-align: center;
 }
 
 .smitem-info span{
@@ -970,12 +985,20 @@ input {
   gap: 1.5rem;
 }
 
+.footer-title{
+  margin-bottom: 1rem;
+}
+
 .footer-item{
   margin-top: 0.4rem;
 }
 
 .footer-data .footer-link{
   color: var(--text-color-light);
+}
+
+.footer-data .footer-link:hover{
+  color: var(--text-color);
 }
 
 .footer-end{
@@ -1041,8 +1064,97 @@ input {
 
 
 
+@media screen and (max-width:340px){
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  .flex-btn{
+    padding: 3vw 5vw;
+    border: 3px solid var(--main-color);
+    font-size: 7vw;
+  }
+  .menu-list-items{
+    font-size: 5vw;
+    gap: 2vw;
+  }
+  .menu-list-items li{
+    padding: 1vw 2vw;
+  }
+  .info-div h3,.lgitem p{
+    padding: 0.7rem;
+    
+  }
+  .smitems{
+    padding: 1rem;
+  }
+  .dish-img{
+    height: 60%;
+  }
+  .smitem-info {
+    font-size: 0.9rem;
+  }
+  .lgitem{
+    height: 34%;
+  }
+  .mobile-features li i {
+    font-size: var(--h2-font-size);
+    margin-bottom: 0.5rem;
+  }
+  .mobile-features li span{
+    font-size: 0.7rem;
+  }
+  .clints{
+    padding: 2rem 1rem;
+  }
+  .clint-top img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.7rem;
+  }
+  .clint-top{
+    margin-bottom: 0;
+  }
+  .clint p{
+    font-size: 14px;
+  }
+  .order .survery p {
+    font-size: 16px;
+  }
+  .footer-content{
+    gap: 0.8rem;
+  }
+}
 
 
+
+@media screen and (min-width: 550px) {
+  .flex-container{
+    flex-direction: row;
+    gap: 10%;
+  }
+  .flex-data, .flex-img{
+    width : 45%;
+  }
+  .mobile-container .flex-img{
+    width : 80%;
+    margin: 1.7rem auto;
+  }
+  .flex-img{
+    height: 300px;
+  }
+  .clints{
+    flex-direction: row;
+  }
+  .footer-content{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 2rem;
+    column-gap: 6rem;
+  }
+}
 
 
 
@@ -1072,5 +1184,23 @@ input {
   .change-theme-name {
     display: none;
   }
-
+  .home-btn{
+    color: #FFF;
+    padding: 1rem 2.5rem;
+    border: 5px solid var(--main-color);
+    font-size: 1.8rem;
+  }
+  .menu-list-items{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+  }
+  .clint {
+    width: 50%;
+    padding: 0 4rem;
+  }
+  .footer-content{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1.7rem;
+  }
 }
