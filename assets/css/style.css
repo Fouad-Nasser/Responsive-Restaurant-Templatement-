@@ -10,7 +10,8 @@
     --title-color: #d8264a;
     --text-color: #333;
     --text-color-light: #888;
- 
+    --border-box-color:#DDD;
+    --box-shadow-color:rgb(0 0 0 / 24%);
   
     /*========== Font family ==========*/
     --body-font: 'Open Sans', sans-serif;
@@ -65,7 +66,9 @@ body.dark-theme {
     --body-color:#17171c;
     --title-color: #d8264a;
     --text-color: #FFF;
-    --text-color-light: #DDD;
+    --text-color-light: #CCC;
+    --border-box-color:#333;
+    --box-shadow-color:rgba(238, 231, 231, 0.24);
 }
 
 
@@ -193,6 +196,96 @@ input {
 
 /********************** start header ************************/
 
+/* =============== loading ==============*/
+#loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 999999;
+}
+
+#ring{
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: transparent;
+  border: 3px solid var(--border-box-color);
+  border-radius: 50%;
+  text-align: center;
+  color: var(--main-color);
+  line-height: 180px;
+  font-family: sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#ring::before{
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  border-radius: 50%;
+  animation: animateCircle 1s linear infinite;
+}
+
+#ring #span{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animateHeadCircle 1s linear infinite;
+}
+#ring #span::before{
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--main-color);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+@keyframes animateCircle
+{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+} 
+
+@keyframes animateHeadCircle
+{
+  0%{
+      transform: rotate(45deg);
+  }
+  100%{
+      transform: rotate(405deg);
+  }
+}
+
+
+
 /*=============== HEADER ===============*/
 .header{
     width: 100%;
@@ -205,7 +298,7 @@ input {
 
 /*=============== NAV ===============*/
 .nav{
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -239,7 +332,7 @@ input {
       right: -100%;
       width: 70%;
       height: 100%;
-      box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+      box-shadow: -1px 0 4px var(--box-shadow-color);
       padding: 3rem;
       transition: .4s;
     }
@@ -419,6 +512,10 @@ input {
   cursor: pointer;
   border-radius: 12rem;
   margin: 0 0 1rem 1rem;
+}
+
+.menu-list-items li:hover{
+  color: crimson;
 }
 
 .mli-active{
@@ -670,6 +767,9 @@ input {
   .vapour span{
     bottom: -30px;
   }
+  .dish-img{
+    width: 50%;
+  }
 }
 
 /********************* end menu ***********************/
@@ -774,9 +874,9 @@ input {
 .popular-item{
   text-align: center;
   padding: 3rem;
-  border: 1px solid #DDD;
+  border: 1px solid var(--border-box-color);
   border-radius: 2rem;
-  box-shadow:  rgb(0 0 0 / 24%) 0px 3px 8px;
+  box-shadow:  var(--box-shadow-color) 0px 3px 8px;
   flex-direction: column;
   flex-shrink: 0;
   min-width: 20rem;
@@ -798,7 +898,7 @@ input {
 }
 
 .popular-item .popular-btn{
-  color: var(--body-color);
+  color: #FFF;
   padding: 0.7rem 1rem;
   background-color:  var(--main-color);
   font-size: var(--normal-font-size);
@@ -904,13 +1004,13 @@ input {
 
 .order .input-box textarea,
 .order .input-box .map {
-  height: 180px;
+  height: 13rem;
 }
 
 .order .input-box input:focus,
 .order .input-box textarea:focus{
-  box-shadow: 0 0 10px crimson;
-  border-color: crimson;
+  box-shadow: 0 0 10px var(--main-color);
+  border-color: var(--main-color);
 }
 
 .order .survery label{
@@ -948,8 +1048,8 @@ input {
 .survery textarea:focus
 {
   outline: none !important;
-  box-shadow: 0 0 10px crimson;
-  border-color: crimson;
+  box-shadow: 0 0 10px var(--main-color);
+  border-color: var(--main-color);
 }
 
 .button{
@@ -959,7 +1059,7 @@ input {
 .button input{
   width: 90%;
   padding: 10px;
-  background: crimson;
+  background: var(--main-color);
   color: #FFF;
   font-size: 20px;
   font-weight: 500;
@@ -1056,7 +1156,7 @@ input {
 }
 
 .scrollup-icon {
-  color: var(--body-color);
+  color: #FFF;
   font-size: 1.2rem;
 }
 
@@ -1216,3 +1316,4 @@ input {
     column-gap: 1.7rem;
   }
 }
+

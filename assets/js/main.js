@@ -116,3 +116,21 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+const sr = ScrollReveal({
+  distance:'70px',
+  duration:3000,
+  reset:true
+})
+
+sr.reveal(`#content-one`,{
+  origin: 'top'
+})
+
+
+
+let preloader = document.getElementById("loading");
+		window.addEventListener('load', function(){
+			preloader.style.display = 'none';
+    })

@@ -11,7 +11,7 @@
         <link
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
+        /> 
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/style.css">
@@ -19,6 +19,7 @@
         <title>Responsive Website res</title>
 </head>
 <body>
+    
     <!----------------  start header  ----------------->
     <header class="header" id="header">
         <nav class="nav container">
@@ -42,6 +43,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#popular" class="nav-link">popular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#order" class="nav-link">order</a>
                     </li>
                 </ul>
 
@@ -69,7 +73,7 @@
            <div class="swiper-wrapper">
      
               <div class="swiper-slide slide" style="background: url(assets/img/home-slide-1.jpg) no-repeat;">
-                 <div class="content">
+                 <div class="content" id="content-one">
                     <div class="slid-commit">
                         <i class="fa-solid fa-bowl-food"></i>
                         <span>best dishes</span>
@@ -130,7 +134,7 @@
 
 
     <!----------------  start menu  ----------------->
-    <section class="menu">
+    <section class="menu" id="menu">
         <h2 class="menu-head section-title">Choose your favorite meal</h2>
 
         <ul class="menu-list-items">
@@ -157,27 +161,27 @@
                    <div class="dish-img">
                     <img src="assets/img/fried-checken.jpg" alt="">
                    </div>
-                   <span class="smitem-info">fried-checken <span> 20$</span></span>
+                   <span class="smitem-info">fried-checken <br> <span> 20$</span></span>
                </div>
                <div class="smitem">
                     <div class="dish-img">
                         <img src="assets/img/potato.jpg" alt="">
                    </div>
-                   <span class="smitem-info">hot potato <span> 30$</span></span>
+                   <span class="smitem-info">hot potato <br> <span> 30$</span></span>
     
                </div>
                <div class="smitem">
                     <div class="dish-img">
                         <img src="assets/img/hot-dog.jpg" alt="">
                    </div>
-                   <span class="smitem-info">hot dog <span> 24$</span></span>
+                   <span class="smitem-info">hot dog <br> <span> 24$</span></span>
     
                </div>
                <div class="smitem">
                     <div class="dish-img">
                         <img src="assets/img/burger.jpg" alt="">
                    </div>
-                   <span class="smitem-info">spices burger <span> 32$</span></span>
+                   <span class="smitem-info">spices burger <br> <span> 32$</span></span>
                </div>
             </div>    
         </div>
@@ -399,7 +403,7 @@
 
 
     <!----------------  start popular  ----------------->
-    <section class="popular section container">
+    <section class="popular section container" id="popular">
         <h2 class="section-title">
             Explore our popular dishes
         </h2>
@@ -468,7 +472,7 @@
 
 
     <!----------------  start order  ----------------->
-    <section class="section order">
+    <section class="section order" id="order">
         <h2 class="section-title">get your order now</h2>
         <div class="order-container">
             <div class="order-content">
@@ -681,7 +685,16 @@
         <i class="fa-solid fa-arrow-up scrollup-icon"></i>
     </a>
 
+    <div id="loading">
+        <div id="ring">
+            loading...
+            <span id="span"></span>
+        </div>
+    </div>
 
+    
+
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
