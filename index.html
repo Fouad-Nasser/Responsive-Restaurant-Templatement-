@@ -135,13 +135,13 @@
 
     <!----------------  start menu  ----------------->
     <section class="menu" id="menu">
-        <h2 class="menu-head section-title">Choose your favorite meal</h2>
+        <h2 class="menu-head section-title">Choose your <br> favorite meal</h2>
 
         <ul class="menu-list-items">
             <li class="mli-active" data-cont="#first-menu-div">spicy</li>
-            <li data-cont="#secound-menu-div">grilled</li>
-            <li data-cont="#third-menu-div">candy</li>
-            <li data-cont="#fourth-menu-div">juice</li>
+            <li class="mli-not-active" data-cont="#secound-menu-div">grilled</li>
+            <li class="mli-not-active" data-cont="#third-menu-div">candy</li>
+            <li class="mli-not-active" data-cont="#fourth-menu-div">juice</li>
         </ul>
 
 
@@ -337,7 +337,7 @@
 
 
     <!----------------  start mobile  ----------------->
-    <section class="mobile section container" id="mobile">
+    <section class="mobile section container">
         <div class="mobile-container flex-container">
             <div class="flex-data">
                 <h2 class="section-title flex-title">enjoy with our <br> mobile app</h2>
@@ -377,7 +377,7 @@
 
     <!----------------  start clints  ----------------->
     <section class="our-clints section">
-        <h2 class="section-title">What do our clients say about us?</h2>
+        <h2 class="section-title">What do our clients <br> say about us?</h2>
         <div class="clints">
             <div class="clint"> 
                 <div class="clint-top">
@@ -405,12 +405,14 @@
     <!----------------  start popular  ----------------->
     <section class="popular section container" id="popular">
         <h2 class="section-title">
-            Explore our popular dishes
+            Explore our <br> popular dishes
         </h2>
         <div class="swiper popular-items">
          <div class="swiper-wrapper">
               <div class="swiper-slide popular-item">
-                <img src="assets/img/burger.jpg" alt="" class="dish-img">
+                  <div class="dish-img-wrapper">
+                    <img src="assets/img/burger.jpg" alt="" class="dish-img">
+                  </div>
                <h3>spices burger</h3>
                <div class="stars">
                    <i class="fas fa-star"></i>
@@ -424,7 +426,10 @@
            </div>
    
            <div class="swiper-slide popular-item">
-               <img src="assets/img/fried-checken.jpg" alt="" class="dish-img">
+                <div class="dish-img-wrapper">
+                    <img src="assets/img/fried-checken.jpg" alt="" class="dish-img">
+                </div>
+
               <h3>fried-checken</h3>
               <div class="stars">
                   <i class="fas fa-star"></i>
@@ -438,7 +443,10 @@
           </div>
    
                <div class="swiper-slide popular-item">
-                   <img src="assets/img/fruit-cake.jpg" alt="" class="dish-img">
+                    <div class="dish-img-wrapper">
+                        <img src="assets/img/fruit-cake.jpg" alt="" class="dish-img">
+                    </div>
+
                <h3>fruit cake</h3>
                <div class="stars">
                    <i class="fas fa-star"></i>
@@ -452,17 +460,20 @@
            </div>
    
            <div class="swiper-slide popular-item">
-               <img src="assets/img/fish1.jpg" alt="" class="dish-img">
-           <h3>fish dish</h3>
-           <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fa-solid fa-star-half-stroke"></i>
-           </div>
-           <div class="price">$29.99</div>
-           <a href="#" class="btn popular-btn">buy now</a>
+                <div class="dish-img-wrapper">
+                    <img src="assets/img/fish1.jpg" alt="" class="dish-img">
+                </div>
+
+                <h3>fish dish</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="price">$29.99</div>
+                <a href="#" class="btn popular-btn">buy now</a>
            </div>
          </div>
         <div class="swiper-pagination"></div>
@@ -473,7 +484,7 @@
 
     <!----------------  start order  ----------------->
     <section class="section order" id="order">
-        <h2 class="section-title">get your order now</h2>
+        <h2 class="section-title">get your <br> order now</h2>
         <div class="order-container">
             <div class="order-content">
                 <form action="#">

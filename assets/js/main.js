@@ -32,6 +32,30 @@ var swiper = new Swiper(".home-slider", {
 
 
 
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+// scrollActive();
+
+
+
+
 /*============== tapped ===============*/
 const tabs = document.querySelectorAll(".menu-list-items li");
 const menuDivs = document.querySelectorAll(".menu-div");
@@ -40,8 +64,11 @@ for (const tab of tabs) {
    tab.addEventListener('click',(e)=>{
        tabs.forEach((el)=>{
            el.classList.remove('mli-active');
+           el.classList.add('mli-not-active');
         });
          e.currentTarget.classList.add('mli-active');
+         e.currentTarget.classList.remove('mli-not-active');
+
 
          menuDivs.forEach((el)=>{
             el.style.display='none';
@@ -121,11 +148,22 @@ themeButton.addEventListener('click', () => {
 const sr = ScrollReveal({
   distance:'70px',
   duration:3000,
-  reset:true
 })
 
-sr.reveal(`#content-one`,{
+sr.reveal(`#content-one, .first-menu-div, .popular-items`,{
   origin: 'top'
+})
+
+sr.reveal(`.flex-data, .menu-list-items, .survery, .footer-end`,{
+  origin: 'left'
+})
+
+sr.reveal(`.flex-img, .mobile-features, .order-content`,{
+  origin: 'right'
+})
+
+sr.reveal(`.clint, .footer-data`,{
+  origin: 'bottom'
 })
 
 

@@ -294,6 +294,8 @@ input {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    box-shadow:  var(--box-shadow-color) 0px 3px 8px;
+    border: 1px solid var(--border-box-color);
 }
 
 /*=============== NAV ===============*/
@@ -512,15 +514,18 @@ input {
   cursor: pointer;
   border-radius: 12rem;
   margin: 0 0 1rem 1rem;
+  transition: all ease-in-out 0.5s;
 }
 
-.menu-list-items li:hover{
-  color: crimson;
+.menu-list-items .mli-not-active:hover{
+  color: var(--main-color);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 2px;
 }
 
 .mli-active{
   color: var(--body-color);
-  background: var(--main-color);
+  background: var(--main-color-alt);
   font-weight: var(--font-bold);
   scale: 1.2;
 }
@@ -877,15 +882,29 @@ input {
   border: 1px solid var(--border-box-color);
   border-radius: 2rem;
   box-shadow:  var(--box-shadow-color) 0px 3px 8px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
   min-width: 20rem;
 }
 
-.popular-item img{
+.dish-img-wrapper{
   width: 10rem;
   height: 10rem;
+  overflow: var(--img-hidden);
   margin-bottom: 2rem;
+  border-radius: 50%;
+}
+
+.popular-item .dish-img{
+  width: 100%;
+  height: 100%;
+  transition: var(--img-transition);
+}
+
+.popular-item .dish-img:hover{
+  transform: var(--img-scale);
 }
 
 .popular-item h3{
