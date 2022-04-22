@@ -67,8 +67,8 @@ body.dark-theme {
     --title-color: #d8264a;
     --text-color: #FFF;
     --text-color-light: #CCC;
-    --border-box-color:#333;
-    --box-shadow-color:rgba(238, 231, 231, 0.24);
+    --border-box-color:#0b0b0f;
+    --box-shadow-color:rgb(250 250 250 / 14%);
 }
 
 
@@ -343,9 +343,13 @@ input {
 .nav-list {
     display: flex;
     flex-direction: column;
-    row-gap: 2.5rem;
+    gap: 3rem;
 }
-  
+
+.nav-item{
+  width: fit-content;
+}
+
 .nav-link {
     color: var(--text-color);
     font-size: var(--h3-font-size);
@@ -370,7 +374,7 @@ input {
   font-weight: var(--font-bold);
   display: block;
   height: 3px;
-  width: 3.3rem;
+  width: 100%;
 }
   
 #nav-close {
@@ -524,7 +528,7 @@ input {
 }
 
 .mli-active{
-  color: var(--body-color);
+  color: #FFF;
   background: var(--main-color-alt);
   font-weight: var(--font-bold);
   scale: 1.2;
@@ -534,7 +538,8 @@ input {
   content: "";
   display: block;
   height: 0.1rem;
-  background-color:var(--body-color);
+  margin-top: 2px;
+  background-color:#FFF;
   font-weight: var(--font-bold);
 }
 
@@ -597,11 +602,17 @@ input {
   height: 100%;
   z-index: 222;
   border-radius: 0 0 0 20px;
-  animation: cover 2s;
+  animation: cover 1.5s;
 }
 .s::before{
   background: rgba(252, 13, 5, 0.3);
 }
+
+
+.juice{
+  object-fit: fill;
+}
+
 .vapour{
   position: absolute;
   top:95%;
@@ -695,16 +706,7 @@ input {
   transform: var(--img-scale);
 }
 
-.img-div .botel{
-  width: 50%;
-  animation: botel 2s linear ;
-}
 
-.img-div .fruit{
-  width: 35%;
-  height: 60%;
-  animation: fruit 2s linear ;
-}
 
 @keyframes cover{
   0%{
@@ -712,30 +714,6 @@ input {
   }
   100%{
     width: 100%;
-  }
-}
-
-@keyframes botel{
-  0%{
-    transform :translate(0,0);
-  }
-  50%{
-    transform :translate(2rem,0);
-  }
-  100%{
-    transform :translate(0,0);
-  }
-}
-
-@keyframes fruit{
-  0%{
-    rotate :(0deg);
-  }
-  50%{
-    rotate: 180deg;
-  }
-  100%{
-    rotate: 360deg;
   }
 }
 
@@ -1306,7 +1284,6 @@ input {
   }
   .nav-list {
     flex-direction: row;
-    column-gap: 3rem;
     margin-right: 2rem;
   }
   .nav-toggle, .nav-close {
@@ -1336,3 +1313,8 @@ input {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .nav-list{
+    gap: 1.5rem;
+  }
+}
